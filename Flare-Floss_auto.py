@@ -25,7 +25,10 @@ def main():
         result = []
         for file in files:
             print(f'Processing No {files.index(file)+1}/{len(files)}')
-            res = subprocess.check_output(f'floss.exe {params} {input_dir}\\{file}',cwd=path_to_floss,shell=True).decode('cp866').split('\n')
+            if params != '':
+                res = subprocess.check_output(f'floss.exe {params} {input_dir}\\{file}',cwd=path_to_floss,shell=True).decode('cp866').split('\n')
+            else:
+                res = subprocess.check_output(f'floss.exe {input_dir}\\{file}', cwd=path_to_floss,shell=True).decode('cp866').split('\n')
             res = [i.strip('\r') for i in res]
             res = [i for i in res if i != '']
             result.append({file:res})
