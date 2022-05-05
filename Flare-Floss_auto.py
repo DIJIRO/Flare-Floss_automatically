@@ -8,6 +8,7 @@ def main():
         print('Options:\n    -n   Path to floss.exe\n    -i   Path to folder with input files\n    -o   Output file name(optional)\n    -floss   Floss parameters(MUST BE AT THE END!!!)\n')
     else:
         outup_name = 'result'
+        params = ''
         for arg in sys.argv:
             if arg == '-n':
                 path_to_floss = sys.argv[sys.argv.index(arg)+1]
@@ -16,7 +17,6 @@ def main():
             elif arg == '-o':
                 outup_name = sys.argv[sys.argv.index(arg)+1]
             elif arg == '-floss':
-                params = ''
                 for i in range(sys.argv.index(arg)+1,len(sys.argv)):
                     params += sys.argv[i]+' '
         files = os.listdir(input_dir)
