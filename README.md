@@ -1,5 +1,6 @@
 # Flare-Floss_automatically
 Flare-Floss helper for fast strings searching
+Windows only(
 Type -h for help
 
 Options:
