@@ -1,11 +1,12 @@
 # Flare-Floss_automatically
-Flare-Floss helper for fast strings searching
+## Flare-Floss helper for fast strings searching
+<hr/>
 
-Windows only(
+#### Windows only(
 
-Type -h for help
+* <b>Type -h for help</b>
 
-Options:
+### Options:
 
     -n   Path to floss.exe
     
